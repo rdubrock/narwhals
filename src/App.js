@@ -16,7 +16,6 @@ import Habitat from './Habitat';
 
 import { withRouter } from 'react-router-dom';
 import {
-  BrowserRouter as Router,
   Route,
   Link,
 } from 'react-router-dom';
@@ -127,9 +126,7 @@ class App extends Component {
         <Route path='/reproduction' component={ Reproduction } />
         <Route path='/behavior' component={ Behavior } />
         <Route path='/habitat' component={ Habitat } />
-        <p className="App-intro">
-          This Site is all about Narwhals!
-        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GcYVCvBq0FY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         <h3>Research Citations</h3>
         <a href="https://en.wikipedia.org/wiki/Narwhal">Wiki page for Narwhal</a>
         <a href="https://www.worldwildlife.org/stories/unicorn-of-the-sea-narwhal-facts">WorldWildlife</a>
