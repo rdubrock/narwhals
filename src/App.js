@@ -4,6 +4,11 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Subheader from 'material-ui/Subheader';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+} from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -30,12 +35,24 @@ class App extends Component {
           onRequestChange={ this.toggleDrawer }
         >
           <Subheader>Narwhal Stuff</Subheader>
-          <MenuItem>Diet</MenuItem>
-          <MenuItem>Anatomy And Biology</MenuItem>
-          <MenuItem>Scientific Name and Class</MenuItem>
-          <MenuItem>Image Gallery</MenuItem>
-          <MenuItem>Mating and Reproduction Info</MenuItem>
-          <MenuItem>Behavior</MenuItem>
+          <MenuItem>
+            <Link to='/diet'>Diet</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to='/anatomy'>Anatomy And Biology</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to='/name'>Scientific Name and Class</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to='/images'>Image Gallery</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to='/reproduction'>Mating and Reproduction Info</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to='/behavior'>Behavior</Link>
+          </MenuItem>
         </Drawer>
         <header className="App-header">
           <img src='jedi_narwhal.jpg' className="App-logo" alt="logo" />
