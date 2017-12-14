@@ -4,6 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Subheader from 'material-ui/Subheader';
+import Home from './Home';
 import {
   BrowserRouter as Router,
   Route,
@@ -36,6 +37,9 @@ class App extends Component {
         >
           <Subheader>Narwhal Stuff</Subheader>
           <MenuItem>
+            <Link to='/'>Home</Link>
+          </MenuItem>
+          <MenuItem>
             <Link to='/diet'>Diet</Link>
           </MenuItem>
           <MenuItem>
@@ -54,10 +58,7 @@ class App extends Component {
             <Link to='/behavior'>Behavior</Link>
           </MenuItem>
         </Drawer>
-        <header className="App-header">
-          <img src='jedi_narwhal.jpg' className="App-logo" alt="logo" />
-          <h1 className="App-title">Narwhals, Yeah!</h1>
-        </header>
+        <Route path='/' component={ Home } />
         <p className="App-intro">
           This Site is all about Narwhals!
         </p>
