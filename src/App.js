@@ -79,13 +79,15 @@ class App extends Component {
           title='Narwhals, better than puffins'
           onLeftIconButtonClick={ this.toggleDrawer }
         />
-        <AutoComplete
-          hintText='Search Term'
-          fullWidth={ true }
-          dataSource={ this.state.dataSource }
-          onNewRequest={ this.handleSearch }
-          filter={AutoComplete.fuzzyFilter}
-        />
+        <div style={ {backgroundColor: 'white' }}>
+          <AutoComplete
+            hintText='Search Term'
+            fullWidth={ true }
+            dataSource={ this.state.dataSource }
+            onNewRequest={ this.handleSearch }
+            filter={ AutoComplete.fuzzyFilter }
+          />
+        </div>
         <Drawer
           docked={ false }
           open={ this.state.drawerOpen }
@@ -117,7 +119,6 @@ class App extends Component {
             <Link to='/habitat'>Habitat</Link>
           </MenuItem>
         </Drawer>
-        <Home />
         <Route path='/' component={ Home } />
         <Route path='/diet' component={ Diet } />
         <Route path='/anatomy' component={ Anatomy } />
