@@ -61,9 +61,13 @@ class App extends Component {
     }
   }
 
+  generateColor() {
+    return Math.ceil(Math.random() * 255); 
+  }
+
   render() {
     return (
-      <div className="App">
+      <div className="App" style={ { backgroundColor: `rgb(${this.generateColor()},${this.generateColor()},${this.generateColor()})` }}>
         <AppBar
           title='Narwhals, better than puffins'
           onLeftIconButtonClick={ this.toggleDrawer }
