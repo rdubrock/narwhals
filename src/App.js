@@ -1,10 +1,42 @@
 import React, { Component } from 'react';
 import './App.css';
+import AppBar from 'material-ui/AppBar';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
+import Subheader from 'material-ui/Subheader';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      drawerOpen: false,
+    };
+  }
+
+  toggleDrawer = () => {
+    this.setState({ drawerOpen: !this.state.drawerOpen })
+  }
+
   render() {
     return (
       <div className="App">
+        <AppBar
+          title='Narwhals, better than puffins'
+          onLeftIconButtonClick={ this.toggleDrawer }
+        />
+        <Drawer
+          docked={ false }
+          open={ this.state.drawerOpen }
+          onRequestChange={ this.toggleDrawer }
+        >
+          <Subheader>Narwhal Stuff</Subheader>
+          <MenuItem>Diet</MenuItem>
+          <MenuItem>Anatomy And Biology</MenuItem>
+          <MenuItem>Scientific Name and Class</MenuItem>
+          <MenuItem>Image Gallery</MenuItem>
+          <MenuItem>Mating and Reproduction Info</MenuItem>
+          <MenuItem>Behavior</MenuItem>
+        </Drawer>
         <header className="App-header">
           <img src='jedi_narwhal.jpg' className="App-logo" alt="logo" />
           <h1 className="App-title">Narwhals, Yeah!</h1>
