@@ -4,7 +4,9 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Subheader from 'material-ui/Subheader';
+import AutoComplete from 'material-ui/AutoComplete';
 import Home from './Home';
+import { withRouter } from 'react-router-dom';
 import {
   BrowserRouter as Router,
   Route,
@@ -16,11 +18,47 @@ class App extends Component {
     super();
     this.state = {
       drawerOpen: false,
+      dataSource: [
+        'Home',
+        'Diet',
+        'Anatomy',
+        'Name',
+        'Image Gallery',
+        'Reproduction',
+        'Behavior',
+      ],
     };
   }
 
   toggleDrawer = () => {
     this.setState({ drawerOpen: !this.state.drawerOpen })
+  }
+
+  handleSearch = (value) => {
+    const { history } = this.props;
+    switch(value) {
+      case 'Home':
+        history.push('/')
+        break;
+      case 'Diet':
+        history.push('/diet');
+        break;
+      case 'Anatomy':
+        history.push('/anatomy');
+        break;
+      case 'Name':
+        history.push('/name');
+        break;
+      case 'Image Gallery':
+        history.push('/images');
+        break;
+      case 'Reproduction':
+        history.push('/reproduction');
+        break;
+      case 'Behavior':
+        history.push('/behavior');
+        break;
+    }
   }
 
   render() {
@@ -29,6 +67,13 @@ class App extends Component {
         <AppBar
           title='Narwhals, better than puffins'
           onLeftIconButtonClick={ this.toggleDrawer }
+        />
+        <AutoComplete
+          hintText='Search Term'
+          fullWidth={ true }
+          dataSource={ this.state.dataSource }
+          onNewRequest={ this.handleSearch }
+          filter={AutoComplete.fuzzyFilter}
         />
         <Drawer
           docked={ false }
@@ -58,6 +103,7 @@ class App extends Component {
             <Link to='/behavior'>Behavior</Link>
           </MenuItem>
         </Drawer>
+        <Home />
         <Route path='/' component={ Home } />
         <p className="App-intro">
           This Site is all about Narwhals!
@@ -107,4 +153,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
