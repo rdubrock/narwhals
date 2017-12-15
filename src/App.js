@@ -129,8 +129,8 @@ class App extends Component {
         <Route path='/habitat' component={ Habitat } />
         <iframe width="560" height="315" src="https://www.youtube.com/embed/GcYVCvBq0FY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         <h3>Research Citations</h3>
-        <a href="https://en.wikipedia.org/wiki/Narwhal">Wiki page for Narwhal</a>
-        <a href="https://www.worldwildlife.org/stories/unicorn-of-the-sea-narwhal-facts">WorldWildlife</a>
+        <a href="https://en.wikipedia.org/wiki/Narwhal">Wiki page for Narwhal</a><br/>
+        <a href="https://www.worldwildlife.org/stories/unicorn-of-the-sea-narwhal-facts">WorldWildlife</a><br/>
         <a href="https://owlcation.com/stem/The-Narwhal-The-Fascinating-Unicorn-Whale-of-the-Arctic-Ocean">Owlcation</a>
       </div>
     );
