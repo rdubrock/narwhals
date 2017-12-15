@@ -79,7 +79,10 @@ class App extends Component {
           title='Narwhals, better than puffins'
           onLeftIconButtonClick={ this.toggleDrawer }
         />
-        <div style={ {backgroundColor: 'white' }}>
+        <div style={ {
+          backgroundColor: 'white',
+          height: '100%',
+        }}>
           <AutoComplete
             hintText='Search Term'
             fullWidth={ true }
@@ -119,7 +122,7 @@ class App extends Component {
             <Link to='/habitat'>Habitat</Link>
           </MenuItem>
         </Drawer>
-        <Route path='/' component={ Home } />
+        <Route exact path='/' component={ Home } />
         <Route path='/diet' component={ Diet } />
         <Route path='/anatomy' component={ Anatomy } />
         <Route path='/scientific' component={ Scientific } />
@@ -127,7 +130,6 @@ class App extends Component {
         <Route path='/reproduction' component={ Reproduction } />
         <Route path='/behavior' component={ Behavior } />
         <Route path='/habitat' component={ Habitat } />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/GcYVCvBq0FY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         <h3>Research Citations</h3>
         <a href="https://en.wikipedia.org/wiki/Narwhal">Wiki page for Narwhal</a>
         <a href="https://www.worldwildlife.org/stories/unicorn-of-the-sea-narwhal-facts">WorldWildlife</a>
