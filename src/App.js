@@ -131,8 +131,8 @@ class App extends Component {
         <Route path='/behavior' component={ Behavior } />
         <Route path='/habitat' component={ Habitat } />
         <h3>Research Citations</h3>
-        <a href="https://en.wikipedia.org/wiki/Narwhal">Wiki page for Narwhal</a>
-        <a href="https://www.worldwildlife.org/stories/unicorn-of-the-sea-narwhal-facts">WorldWildlife</a>
+        <a href="https://en.wikipedia.org/wiki/Narwhal">Wiki page for Narwhal</a><br/>
+        <a href="https://www.worldwildlife.org/stories/unicorn-of-the-sea-narwhal-facts">WorldWildlife</a><br/>
         <a href="https://owlcation.com/stem/The-Narwhal-The-Fascinating-Unicorn-Whale-of-the-Arctic-Ocean">Owlcation</a>
       </div>
     );
