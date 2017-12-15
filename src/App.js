@@ -76,7 +76,7 @@ class App extends Component {
     return (
       <div className="App" style={ { backgroundColor: `rgb(${this.generateColor()},${this.generateColor()},${this.generateColor()})` }}>
         <AppBar
-          title='Narwhals, better than puffins'
+          title='Narwhals, better than puffins, and also griffins'
           onLeftIconButtonClick={ this.toggleDrawer }
         />
         <div style={ {
