@@ -13,6 +13,8 @@ import Images from './Images';
 import Reproduction from './Reproduction';
 import Behavior from './Behavior';
 import Habitat from './Habitat';
+import Funfacts from './Funfacts';
+import Communications from './Communications';
 
 import { withRouter } from 'react-router-dom';
 import {
@@ -33,6 +35,8 @@ class App extends Component {
         'Image Gallery',
         'Reproduction',
         'Behavior',
+        'Communications',
+        'Funfacts'
       ],
     };
   }
@@ -64,6 +68,12 @@ class App extends Component {
         break;
       case 'Behavior':
         history.push('/behavior');
+        break;
+      case 'Communications':
+        history.push('/communications');
+        break;
+      case 'Funfacts':
+        history.push('/funfacts');
         break;
     }
   }
@@ -121,6 +131,12 @@ class App extends Component {
           <MenuItem>
             <Link to='/habitat'>Habitat</Link>
           </MenuItem>
+          <MenuItem>
+            <Link to='/communications'>Communications</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to='/funfacts'>Funfacts</Link>
+          </MenuItem>
         </Drawer>
         <Route exact path='/' component={ Home } />
         <Route path='/diet' component={ Diet } />
@@ -130,6 +146,9 @@ class App extends Component {
         <Route path='/reproduction' component={ Reproduction } />
         <Route path='/behavior' component={ Behavior } />
         <Route path='/habitat' component={ Habitat } />
+        <Route path='/communications' component={ Communications } />
+        <Route path='/funfacts' component={ Funfacts } />
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GcYVCvBq0FY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         <h3>Research Citations</h3>
         <a href="https://en.wikipedia.org/wiki/Narwhal">Wiki page for Narwhal</a><br/>
         <a href="https://www.worldwildlife.org/stories/unicorn-of-the-sea-narwhal-facts">WorldWildlife</a><br/>
